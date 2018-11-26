@@ -43,6 +43,7 @@ public class SignUp {
     driver.findElement(By.id("mat-input-5")).sendKeys("test");
     Thread.sleep(3000);
     driver.findElement(By.id("mat-input-5")).sendKeys(Keys.ENTER);
+    Thread.sleep(2000);
   }
 
   @After
