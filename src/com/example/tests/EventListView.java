@@ -40,13 +40,18 @@ public class EventListView {
     driver.findElement(By.id("mat-input-1")).click();
     driver.findElement(By.id("mat-input-1")).clear();
     driver.findElement(By.id("mat-input-1")).sendKeys("test");
+    Thread.sleep(2000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Encrypted with UTF-8!'])[1]/following::mat-card-actions[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Encrypted with UTF-8!'])[1]/following::span[1]")).click();
+    Thread.sleep(2000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Calendar'])[1]/following::span[1]")).click();
+    Thread.sleep(2000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Calendar'])[1]/following::span[1]")).click();
+    Thread.sleep(2000);
     assertEquals("EditChange", driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[1]/following::mat-panel-title[1]")).getText());
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::button[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/following::button[1]")).click();
+    Thread.sleep(2000);
   }
 
   @After

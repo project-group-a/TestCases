@@ -38,6 +38,7 @@ public class LogIn {
     driver.findElement(By.id("mat-input-1")).sendKeys("test");
     Thread.sleep(3000);
     driver.findElement(By.id("mat-input-1")).sendKeys(Keys.ENTER);
+    Thread.sleep(2000);
   }
 
   @After

@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import static org.junit.Assert.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class About {
@@ -32,7 +33,9 @@ public class About {
   public void testAbout() throws Exception {
     driver.get("http://projectgroupa.ddns.net/welcome");
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::span[2]")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='GitHub Repo'])[1]/following::span[1]")).click();
+    Thread.sleep(2000);
+    assertTrue(driver.findElement(By.id("mat-dialog-title-0")).getText().matches("^Who's responsible for this[\\s\\S]$"));
+    Thread.sleep(2000);
   }
 
   @After

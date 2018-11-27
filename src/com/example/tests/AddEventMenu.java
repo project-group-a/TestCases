@@ -39,12 +39,15 @@ public class AddEventMenu {
     driver.findElement(By.id("mat-input-0")).sendKeys("test");
     driver.findElement(By.id("mat-input-1")).clear();
     driver.findElement(By.id("mat-input-1")).sendKeys("test");
+    Thread.sleep(2000);
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/following::mat-card[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Encrypted with UTF-8!'])[1]/following::button[2]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Day'])[1]/following::span[1]")).click();
+    Thread.sleep(2000);
     assertEquals("Add Event", driver.findElement(By.id("mat-dialog-title-0")).getText());
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='End Date'])[1]/following::span[3]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/following::span[1]")).click();
+    Thread.sleep(2000);
   }
 
   @After
