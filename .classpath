@@ -3,7 +3,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="C:/Users/Zach/Documents/aFall2018/Software Engineering/selenium-java-3.141.59/client-combined-3.141.59.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Zach/Documents/aFall2018/Software Engineering/ProjectGroupA/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="D:/UNO/Fall 2018/Software Engineering/P8/selenium-server-standalone-3.14.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
