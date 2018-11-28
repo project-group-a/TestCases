@@ -1,6 +1,5 @@
 package com.example.tests;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import java.util.concurrent.TimeUnit;
@@ -10,12 +9,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class EventListView {
+public class DayViewTest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -24,34 +24,25 @@ public class EventListView {
   @Before
   public void setUp() throws Exception {
 	System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\Zach\\\\Documents\\\\aFall2018\\\\Software Engineering\\\\ProjectGroupA\\\\chromedriver_win32\\\\chromedriver.exe");
-    driver = new ChromeDriver();
+	driver = new ChromeDriver();
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
-  
+
   @Test
-  public void testEventListView() throws Exception {
+  public void testDayView() throws Exception {
     driver.get("http://projectgroupa.ddns.net/welcome");
     driver.findElement(By.id("mat-input-0")).click();
     driver.findElement(By.id("mat-input-0")).clear();
     driver.findElement(By.id("mat-input-0")).sendKeys("test");
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/following::mat-card[1]")).click();
-    driver.findElement(By.id("mat-input-1")).click();
     driver.findElement(By.id("mat-input-1")).clear();
     driver.findElement(By.id("mat-input-1")).sendKeys("test");
     Thread.sleep(2000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Encrypted with UTF-8!'])[1]/following::mat-card-actions[1]")).click();
     driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Encrypted with UTF-8!'])[1]/following::span[1]")).click();
-    Thread.sleep(2000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Calendar'])[1]/following::span[1]")).click();
-    Thread.sleep(2000);
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Calendar'])[1]/following::span[1]")).click();
-    Thread.sleep(2000);
-    assertEquals("EditChange", driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[1]/following::mat-panel-title[1]")).getText());
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::button[1]")).click();
-    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/following::button[1]")).click();
+    driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Week'])[1]/following::div[3]")).click();
     Thread.sleep(2000);
   }
+  
 
   @After
   public void tearDown() throws Exception {
